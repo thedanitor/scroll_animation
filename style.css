@@ -16,6 +16,8 @@ body {
     justify-content: center;
     /* no margins  */
     margin: 0;
+    /* remove horizontal scrollbar */
+    overflow-x: hidden;
 }
 
 h1 {
