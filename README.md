@@ -10,4 +10,4 @@ This project is from the Day 6 code along video from Udemy's 50 projects in 50 d
 
 
 ### Things Learned
-
+* nth-of-type(even) to select every other element matching selector

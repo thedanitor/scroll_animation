@@ -8,15 +8,58 @@
 body {
     font-family: "Roboto", sans-serif;
     display: flex;
+    background-color: #efedd6;
     flex-direction: column;
     /* Centered horizontally */
     align-items: center; 
     /* Centered vertically on 100% viewport */
     justify-content: center;
-    /* 100% viewport height  */
-    height: 100vh;
-    /* don't want scrollbars  */
-    overflow: hidden;
     /* no margins  */
     margin: 0;
+}
+
+h1 {
+    /* 10px all around */
+    margin: 10px;
+}
+
+/* div with class box */
+.box {
+    background-color: steelblue;
+    color: white;
+    /* so we can position horizontally, vertically */
+    display: flex;
+    /* horizontal center */
+    justify-content: center;
+    /* vertical center */
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    /* 10px all around */
+    margin: 10px;
+    /* rounded corners */
+    border-radius: 10px;
+    /* shadow w/ 2px x-offset (right), 4px y-offset (bottom), 5px blur, black 0.3 opacity*/
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+    /* set boxes 400% to the right as default (offscreen) */
+    transform: translateX(400%);
+    /* 0.4s transition on transform property, ease */
+    transition: transform 0.4s ease;
+}
+
+/* div with box class, but every other one */
+.box:nth-of-type(even) {
+    /* set even boxes 400% to the left as default (offscreen) */
+    transform: translateX(-400%);
+}
+
+/* div with class box and show */
+.box.show {
+    /* move back to default position (centered in this case) */
+    transform: translateX(0);
+}
+
+/* h2 in div with class box */
+.box h2 {
+    font-size: 45px;
 }
